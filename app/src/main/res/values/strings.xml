@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Innovation PDF Toolkit</string>
+
+    <string name="tool_merge">Merge PDFs</string>
+    <string name="tool_merge_desc">Combine multiple files</string>
+    <string name="tool_split">Split PDF</string>
+    <string name="tool_split_desc">Extract a page range</string>
+    <string name="tool_images_to_pdf">Images to PDF</string>
+    <string name="tool_images_to_pdf_desc">Photos into one PDF</string>
+    <string name="tool_compress">Compress PDF</string>
+    <string name="tool_compress_desc">Reduce file size</string>
+
+    <string name="merge_instruction">Select two or more PDF files to combine into one, in the order you pick them.</string>
+    <string name="select_pdfs">Select PDF files</string>
+    <string name="files_selected">files selected</string>
+    <string name="merge_now">Merge Now</string>
+
+    <string name="split_instruction">Select a PDF and choose the page range to extract into a new file.</string>
+    <string name="select_pdf">Select PDF file</string>
+    <string name="total_pages">Total pages</string>
+    <string name="from_page">From page</string>
+    <string name="to_page">To page</string>
+    <string name="split_now">Split Now</string>
+
+    <string name="images_instruction">Select photos in the order you want them to appear as PDF pages.</string>
+    <string name="select_images">Select images</string>
+    <string name="images_selected">images selected</string>
+    <string name="convert_now">Convert Now</string>
+
+    <string name="compress_instruction">Select a PDF and choose a compression level. Lower quality means a smaller file.</string>
+    <string name="compress_now">Compress Now</string>
+
+    <string name="quality_label">Quality</string>
+    <string name="quality_compressed">Small size</string>
+    <string name="quality_standard">Balanced</string>
+    <string name="quality_high">High quality</string>
+
+    <string name="processing">Processing\u2026</string>
+    <string name="success">Done</string>
+    <string name="pages">Pages</string>
+    <string name="failed">Failed</string>
+</resources>

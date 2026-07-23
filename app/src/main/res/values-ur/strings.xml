@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">انوویشن پی ڈی ایف ٹول کٹ</string>
+
+    <string name="tool_merge">پی ڈی ایف ملائیں</string>
+    <string name="tool_merge_desc">کئی فائلیں ایک میں</string>
+    <string name="tool_split">پی ڈی ایف تقسیم کریں</string>
+    <string name="tool_split_desc">صفحات کی رینج نکالیں</string>
+    <string name="tool_images_to_pdf">تصاویر سے پی ڈی ایف</string>
+    <string name="tool_images_to_pdf_desc">فوٹوز ایک پی ڈی ایف میں</string>
+    <string name="tool_compress">پی ڈی ایف چھوٹا کریں</string>
+    <string name="tool_compress_desc">فائل سائز کم کریں</string>
+
+    <string name="merge_instruction">دو یا زیادہ پی ڈی ایف فائلیں چنیں، جس ترتیب میں چنیں گے اسی ترتیب سے ملیں گی۔</string>
+    <string name="select_pdfs">پی ڈی ایف فائلیں چنیں</string>
+    <string name="files_selected">فائلیں منتخب</string>
+    <string name="merge_now">ابھی ملائیں</string>
+
+    <string name="split_instruction">پی ڈی ایف چنیں اور صفحات کی رینج بتائیں جو نئی فائل میں چاہیے۔</string>
+    <string name="select_pdf">پی ڈی ایف فائل چنیں</string>
+    <string name="total_pages">کل صفحات</string>
+    <string name="from_page">صفحہ نمبر سے</string>
+    <string name="to_page">صفحہ نمبر تک</string>
+    <string name="split_now">ابھی تقسیم کریں</string>
+
+    <string name="images_instruction">تصاویر اسی ترتیب میں چنیں جس ترتیب میں پی ڈی ایف کے صفحات چاہییں۔</string>
+    <string name="select_images">تصاویر چنیں</string>
+    <string name="images_selected">تصاویر منتخب</string>
+    <string name="convert_now">ابھی تبدیل کریں</string>
+
+    <string name="compress_instruction">پی ڈی ایف چنیں اور معیار منتخب کریں — کم معیار مطلب چھوٹی فائل۔</string>
+    <string name="compress_now">ابھی چھوٹا کریں</string>
+
+    <string name="quality_label">معیار</string>
+    <string name="quality_compressed">چھوٹا سائز</string>
+    <string name="quality_standard">متوازن</string>
+    <string name="quality_high">اعلیٰ معیار</string>
+
+    <string name="processing">کام جاری ہے…</string>
+    <string name="success">مکمل ہو گیا</string>
+    <string name="pages">صفحات</string>
+    <string name="failed">ناکام</string>
+</resources>

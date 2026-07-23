@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Innovation PDF Toolkit</string>
+
+    <string name="tool_merge">PDF Milayen</string>
+    <string name="tool_merge_desc">Kai files ek mein</string>
+    <string name="tool_split">PDF Split Karein</string>
+    <string name="tool_split_desc">Pages ki range nikalein</string>
+    <string name="tool_images_to_pdf">Images se PDF</string>
+    <string name="tool_images_to_pdf_desc">Photos ek PDF mein</string>
+    <string name="tool_compress">PDF Chota Karein</string>
+    <string name="tool_compress_desc">File size kam karein</string>
+
+    <string name="merge_instruction">Do ya zyada PDF files chunein — jis tarteeb mein chunenge usi tarteeb se milengi.</string>
+    <string name="select_pdfs">PDF files chunein</string>
+    <string name="files_selected">files select hain</string>
+    <string name="merge_now">Abhi Milayen</string>
+
+    <string name="split_instruction">PDF chunein aur page range batayen jo nayi file mein chahiye.</string>
+    <string name="select_pdf">PDF file chunein</string>
+    <string name="total_pages">Kul pages</string>
+    <string name="from_page">Page se</string>
+    <string name="to_page">Page tak</string>
+    <string name="split_now">Abhi Split Karein</string>
+
+    <string name="images_instruction">Images usi tarteeb mein chunein jis tarteeb mein PDF ke pages chahiye.</string>
+    <string name="select_images">Images chunein</string>
+    <string name="images_selected">images select hain</string>
+    <string name="convert_now">Abhi Convert Karein</string>
+
+    <string name="compress_instruction">PDF chunein aur quality select karein — kam quality matlab chhoti file.</string>
+    <string name="compress_now">Abhi Chota Karein</string>
+
+    <string name="quality_label">Quality</string>
+    <string name="quality_compressed">Chota Size</string>
+    <string name="quality_standard">Balanced</string>
+    <string name="quality_high">High Quality</string>
+
+    <string name="processing">Kaam jaari hai\u2026</string>
+    <string name="success">Mukammal</string>
+    <string name="pages">Pages</string>
+    <string name="failed">Nakaam</string>
+</resources>
