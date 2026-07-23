@@ -10,6 +10,22 @@
     <string name="tool_images_to_pdf_desc">فوٹوز ایک پی ڈی ایف میں</string>
     <string name="tool_compress">پی ڈی ایف چھوٹا کریں</string>
     <string name="tool_compress_desc">فائل سائز کم کریں</string>
+    <string name="tool_scan">دستاویز اسکین کریں</string>
+    <string name="tool_scan_desc">کیمرہ اسکین، خودکار کراپ</string>
+    <string name="tool_ocr">متن نکالیں (OCR)</string>
+    <string name="tool_ocr_desc">پی ڈی ایف سے متن حاصل کریں</string>
+
+    <string name="scan_instruction">اپنے کیمرے سے دستاویز اسکین کریں — کناروں کی تلاش، کراپنگ اور فلٹرز خودکار ہیں۔</string>
+    <string name="start_scan">اسکین شروع کریں</string>
+    <string name="scan_ready">اسکین مکمل — محفوظ کرنے کی جگہ چنیں۔</string>
+    <string name="scan_saved">کامیابی سے محفوظ ہو گیا۔</string>
+    <string name="scan_save_failed">اسکین محفوظ نہیں ہو سکی۔</string>
+    <string name="scan_start_failed">اسکینر شروع نہیں ہو سکا۔</string>
+
+    <string name="ocr_instruction">پی ڈی ایف چنیں تاکہ اس کا متن ڈیوائس پر ہی نکالا جا سکے۔</string>
+    <string name="ocr_processing">متن پڑھا جا رہا ہے…</string>
+    <string name="ocr_no_text">اس پی ڈی ایف میں کوئی متن نہیں ملا۔</string>
+    <string name="save_as_text">.txt کے طور پر محفوظ کریں</string>
 
     <string name="merge_instruction">دو یا زیادہ پی ڈی ایف فائلیں چنیں، جس ترتیب میں چنیں گے اسی ترتیب سے ملیں گی۔</string>
     <string name="select_pdfs">پی ڈی ایف فائلیں چنیں</string>

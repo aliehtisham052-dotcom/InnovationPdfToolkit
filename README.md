@@ -3,14 +3,28 @@
 PDF utility app — Kotlin native, Jetpack Compose + Material3, no external PDF library.
 Brand: Innovation-313 | App ID: `com.innovation313.pdftoolkit`
 
-## Scope (v1 MVP)
+## Scope (v1 MVP + CamScanner-inspired additions)
 
+- **Scan Document** — camera scan with Google's ML Kit Document Scanner (auto edge-detect, auto-crop, filters, multi-page — all built into the SDK's own UI)
+- **Extract Text (OCR)** — on-device text recognition (Google ML Kit Text Recognition), copy or save as .txt
 - **Merge PDFs** — combine 2+ PDFs into one
 - **Split PDF** — extract a page range into a new file
-- **Images to PDF** — combine selected photos into a single PDF (scan-to-PDF alternative)
+- **Images to PDF** — combine selected photos into a single PDF
 - **Compress PDF** — re-render pages at a lower resolution to shrink file size
 
 Trilingual: English (default), Urdu (اردو, RTL), Roman Urdu (`values-b+ur+Latn`).
+
+## Note on the ML Kit dependency
+
+Scan and OCR needed a real edge-detection/OCR model, which the Android framework itself doesn't provide.
+Added **Google ML Kit** (`play-services-mlkit-document-scanner` + `mlkit:text-recognition`) — both free,
+official Google libraries (no cost, no license fee), distinct from the earlier "native-only" approach used
+for Merge/Split/Compress. Trade-offs worth knowing:
+- Requires Google Play Services on the device (fine for the vast majority of Android phones, not for
+  Play-Services-less devices/some Chinese OEM builds)
+- Scanner/OCR models are downloaded on first use via Play Services, so the very first scan may need
+  a moment before the model is ready
+- APK size increases slightly due to the added dependencies
 
 ## Important honest trade-off — please read before testing
 

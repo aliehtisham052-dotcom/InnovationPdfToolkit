@@ -46,9 +46,11 @@ private fun AppNavHost(viewModel: PdfToolViewModel) {
             viewModel.reset()
             currentTool = tool
         })
+        PdfTool.SCAN -> ScanScreen(onBack = ::goHome)
         PdfTool.MERGE -> MergeScreen(viewModel, onBack = ::goHome)
         PdfTool.SPLIT -> SplitScreen(viewModel, onBack = ::goHome)
         PdfTool.IMAGES_TO_PDF -> ImagesToPdfScreen(viewModel, onBack = ::goHome)
         PdfTool.COMPRESS -> CompressScreen(viewModel, onBack = ::goHome)
+        PdfTool.OCR -> OcrScreen(onBack = ::goHome)
     }
 }

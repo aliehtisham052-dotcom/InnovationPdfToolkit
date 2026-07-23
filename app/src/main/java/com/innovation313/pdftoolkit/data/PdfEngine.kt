@@ -166,6 +166,20 @@ object PdfEngine {
         }
     }
 
+    /** Copies bytes from one content Uri to another — used to save the ML Kit scanner's temporary PDF output. */
+    suspend fun copyContentUri(context: Context, sourceUri: Uri, destUri: Uri): Boolean = withContext(Dispatchers.IO) {
+        try {
+            context.contentResolver.openInputStream(sourceUri)?.use { input ->
+                context.contentResolver.openOutputStream(destUri)?.use { output ->
+                    input.copyTo(output)
+                }
+            }
+            true
+        } catch (e: Exception) {
+            false
+        }
+    }
+
     private fun addRenderedPage(document: PdfDocument, page: PdfRenderer.Page, pageNumber: Int, quality: RenderQuality) {
         val width = (page.width * quality.scale).toInt().coerceAtLeast(1)
         val height = (page.height * quality.scale).toInt().coerceAtLeast(1)

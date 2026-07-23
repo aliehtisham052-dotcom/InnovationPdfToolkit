@@ -61,6 +61,12 @@ dependencies {
 
     // Coroutines for background PDF processing off the main thread
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1")
+
+    // Google ML Kit — Document Scanner (camera capture, auto edge-detect/crop, filters, multi-page)
+    implementation("com.google.android.gms:play-services-mlkit-document-scanner:16.0.0")
+    // Google ML Kit — on-device OCR text recognition
+    implementation("com.google.mlkit:text-recognition:16.0.1")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")

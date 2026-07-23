@@ -10,6 +10,22 @@
     <string name="tool_images_to_pdf_desc">Photos into one PDF</string>
     <string name="tool_compress">Compress PDF</string>
     <string name="tool_compress_desc">Reduce file size</string>
+    <string name="tool_scan">Scan Document</string>
+    <string name="tool_scan_desc">Camera scan, auto-crop</string>
+    <string name="tool_ocr">Extract Text (OCR)</string>
+    <string name="tool_ocr_desc">Pull text from a PDF</string>
+
+    <string name="scan_instruction">Scan a document using your camera — edges, cropping, and filters are handled automatically.</string>
+    <string name="start_scan">Start Scanning</string>
+    <string name="scan_ready">Scan complete — choose where to save it.</string>
+    <string name="scan_saved">Saved successfully.</string>
+    <string name="scan_save_failed">Could not save the scan.</string>
+    <string name="scan_start_failed">Could not start the scanner.</string>
+
+    <string name="ocr_instruction">Select a PDF to extract its text using on-device recognition.</string>
+    <string name="ocr_processing">Reading text\u2026</string>
+    <string name="ocr_no_text">No text was found in this PDF.</string>
+    <string name="save_as_text">Save as .txt</string>
 
     <string name="merge_instruction">Select two or more PDF files to combine into one, in the order you pick them.</string>
     <string name="select_pdfs">Select PDF files</string>
