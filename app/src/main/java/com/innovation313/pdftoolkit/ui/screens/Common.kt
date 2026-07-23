@@ -27,7 +27,7 @@ fun QualitySelector(viewModel: PdfToolViewModel) {
         options.forEach { (q, key) ->
             FilterChip(
                 selected = viewModel.quality == q,
-                onClick = { viewModel.setQuality(q) },
+                onClick = { viewModel.updateQuality(q) },
                 label = { Text(resolveLabel(key)) }
             )
         }

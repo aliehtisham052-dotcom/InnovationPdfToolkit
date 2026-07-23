@@ -22,7 +22,7 @@ fun CompressScreen(viewModel: PdfToolViewModel, onBack: () -> Unit) {
     val context = LocalContext.current
 
     // Default to the smallest render size for a dedicated "compress" tool
-    if (viewModel.quality == RenderQuality.STANDARD) viewModel.setQuality(RenderQuality.COMPRESSED)
+    if (viewModel.quality == RenderQuality.STANDARD) viewModel.updateQuality(RenderQuality.COMPRESSED)
 
     val pickFile = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
         if (uri != null) viewModel.setSelectedFiles(listOf(uri))

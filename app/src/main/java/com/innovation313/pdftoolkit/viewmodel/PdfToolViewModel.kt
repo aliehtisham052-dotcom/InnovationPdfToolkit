@@ -38,7 +38,7 @@ class PdfToolViewModel : ViewModel() {
         state = ToolState.Idle
     }
 
-    fun setQuality(q: RenderQuality) {
+    fun updateQuality(q: RenderQuality) {
         quality = q
     }
 
