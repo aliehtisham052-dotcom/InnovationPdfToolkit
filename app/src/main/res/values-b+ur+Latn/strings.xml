@@ -27,6 +27,18 @@
     <string name="ocr_no_text">Is PDF mein koi text nahi mila.</string>
     <string name="save_as_text">.txt ke tor par save karein</string>
 
+    <string name="tool_pages">Page Manager</string>
+    <string name="tool_pages_desc">Tarteeb, rotate, delete</string>
+    <string name="tool_viewer">PDF Viewer</string>
+    <string name="tool_viewer_desc">PDF kholein aur parhein</string>
+    <string name="viewer_instruction">PDF kholein aur yahin parhein — pages load hote hi nazar aate hain.</string>
+    <string name="page_label">Page</string>
+    <string name="move_up">Upar Karein</string>
+    <string name="move_down">Neeche Karein</string>
+    <string name="rotate_page">Ghumayen</string>
+    <string name="delete_page">Delete Karein</string>
+    <string name="save_pdf">PDF Save Karein</string>
+
     <string name="merge_instruction">Do ya zyada PDF files chunein — jis tarteeb mein chunenge usi tarteeb se milengi.</string>
     <string name="select_pdfs">PDF files chunein</string>
     <string name="files_selected">files select hain</string>

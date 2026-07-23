@@ -27,6 +27,18 @@
     <string name="ocr_no_text">No text was found in this PDF.</string>
     <string name="save_as_text">Save as .txt</string>
 
+    <string name="tool_pages">Page Manager</string>
+    <string name="tool_pages_desc">Reorder, rotate, delete</string>
+    <string name="tool_viewer">PDF Viewer</string>
+    <string name="tool_viewer_desc">Open and read PDFs</string>
+    <string name="viewer_instruction">Open a PDF to read it right here — pages appear as they load.</string>
+    <string name="page_label">Page</string>
+    <string name="move_up">Move up</string>
+    <string name="move_down">Move down</string>
+    <string name="rotate_page">Rotate</string>
+    <string name="delete_page">Delete</string>
+    <string name="save_pdf">Save PDF</string>
+
     <string name="merge_instruction">Select two or more PDF files to combine into one, in the order you pick them.</string>
     <string name="select_pdfs">Select PDF files</string>
     <string name="files_selected">files selected</string>

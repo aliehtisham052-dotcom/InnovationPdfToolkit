@@ -11,6 +11,8 @@ import androidx.compose.material.icons.filled.CallSplit
 import androidx.compose.material.icons.filled.Compress
 import androidx.compose.material.icons.filled.DocumentScanner
 import androidx.compose.material.icons.filled.Image
+import androidx.compose.material.icons.filled.MenuBook
+import androidx.compose.material.icons.filled.Reorder
 import androidx.compose.material.icons.filled.TextFields
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -23,6 +25,8 @@ import com.innovation313.pdftoolkit.ui.resolveLabel
 
 enum class PdfTool(val icon: ImageVector, val titleKey: String, val subtitleKey: String) {
     SCAN(Icons.Filled.DocumentScanner, "tool_scan", "tool_scan_desc"),
+    VIEWER(Icons.Filled.MenuBook, "tool_viewer", "tool_viewer_desc"),
+    PAGES(Icons.Filled.Reorder, "tool_pages", "tool_pages_desc"),
     MERGE(Icons.Filled.CallMerge, "tool_merge", "tool_merge_desc"),
     SPLIT(Icons.Filled.CallSplit, "tool_split", "tool_split_desc"),
     IMAGES_TO_PDF(Icons.Filled.Image, "tool_images_to_pdf", "tool_images_to_pdf_desc"),
