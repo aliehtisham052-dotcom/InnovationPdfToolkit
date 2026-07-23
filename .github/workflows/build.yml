@@ -37,22 +37,26 @@ jobs:
           gradle assembleDebug --no-daemon 2>&1 | tee build_log.txt
           exit ${PIPESTATUS[0]}
 
+      - name: Rename APK for a clean download filename
+        if: steps.build.outcome == 'success'
+        run: cp app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/InnovationPDFToolkit.apk
+
       - name: Upload APK artifact
         if: steps.build.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
-          name: innovation-pdftoolkit-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
+          name: innovation-pdftoolkit
+          path: app/build/outputs/apk/debug/InnovationPDFToolkit.apk
 
-      - name: Publish debug APK as a Release asset
+      - name: Publish APK as a Release asset
         if: steps.build.outcome == 'success' && github.event_name == 'push'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: debug-${{ github.run_number }}
-          name: Debug build ${{ github.run_number }}
+          tag_name: build-${{ github.run_number }}
+          name: Build ${{ github.run_number }}
           prerelease: true
-          files: app/build/outputs/apk/debug/app-debug.apk
-          body: Automated debug APK from commit ${{ github.sha }}
+          files: app/build/outputs/apk/debug/InnovationPDFToolkit.apk
+          body: Automated build from commit ${{ github.sha }}
 
       - name: Publish build log as a Release asset (on failure)
         if: steps.build.outcome == 'failure'
