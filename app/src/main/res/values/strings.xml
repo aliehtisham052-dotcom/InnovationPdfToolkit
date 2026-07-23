@@ -39,6 +39,36 @@
     <string name="delete_page">Delete</string>
     <string name="save_pdf">Save PDF</string>
 
+    <string name="tool_watermark">Watermark</string>
+    <string name="tool_watermark_desc">Text stamp, page numbers</string>
+    <string name="tool_signature">E-Signature</string>
+    <string name="tool_signature_desc">Sign with your finger</string>
+    <string name="tool_export">Export &amp; Share</string>
+    <string name="tool_export_desc">Images, print, share</string>
+
+    <string name="watermark_instruction">Add a text watermark and optional page numbers to every page.</string>
+    <string name="watermark_text">Watermark text</string>
+    <string name="opacity">Opacity</string>
+    <string name="diagonal">Diagonal</string>
+    <string name="add_page_numbers">Add page numbers</string>
+    <string name="apply_now">Apply and Save</string>
+
+    <string name="signature_instruction">Draw your signature below, then pick a PDF and where to place it.</string>
+    <string name="clear_signature">Clear signature</string>
+    <string name="signature_empty">Please draw a signature first.</string>
+    <string name="page_number">Page number</string>
+    <string name="position">Position</string>
+    <string name="pos_bottom_left">Bottom left</string>
+    <string name="pos_bottom_right">Bottom right</string>
+    <string name="pos_center">Center</string>
+    <string name="apply_signature">Sign and Save</string>
+
+    <string name="export_instruction">Turn PDF pages into images, print, or share the file.</string>
+    <string name="export_images">Export pages as images</string>
+    <string name="images_exported">Images saved</string>
+    <string name="print_pdf">Print</string>
+    <string name="share_pdf">Share</string>
+
     <string name="merge_instruction">Select two or more PDF files to combine into one, in the order you pick them.</string>
     <string name="select_pdfs">Select PDF files</string>
     <string name="files_selected">files selected</string>

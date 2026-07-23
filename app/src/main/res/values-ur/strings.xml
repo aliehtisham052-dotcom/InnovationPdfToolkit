@@ -39,6 +39,36 @@
     <string name="delete_page">حذف کریں</string>
     <string name="save_pdf">پی ڈی ایف محفوظ کریں</string>
 
+    <string name="tool_watermark">واٹر مارک</string>
+    <string name="tool_watermark_desc">متن اور صفحہ نمبر</string>
+    <string name="tool_signature">ای دستخط</string>
+    <string name="tool_signature_desc">انگلی سے دستخط کریں</string>
+    <string name="tool_export">ایکسپورٹ اور شیئر</string>
+    <string name="tool_export_desc">تصاویر، پرنٹ، شیئر</string>
+
+    <string name="watermark_instruction">ہر صفحے پر متن کا واٹر مارک اور صفحہ نمبر شامل کریں۔</string>
+    <string name="watermark_text">واٹر مارک کا متن</string>
+    <string name="opacity">شفافیت</string>
+    <string name="diagonal">ترچھا</string>
+    <string name="add_page_numbers">صفحہ نمبر شامل کریں</string>
+    <string name="apply_now">لاگو کریں اور محفوظ کریں</string>
+
+    <string name="signature_instruction">نیچے اپنے دستخط بنائیں، پھر پی ڈی ایف اور جگہ منتخب کریں۔</string>
+    <string name="clear_signature">دستخط مٹائیں</string>
+    <string name="signature_empty">پہلے دستخط بنائیں۔</string>
+    <string name="page_number">صفحہ نمبر</string>
+    <string name="position">جگہ</string>
+    <string name="pos_bottom_left">نیچے بائیں</string>
+    <string name="pos_bottom_right">نیچے دائیں</string>
+    <string name="pos_center">درمیان</string>
+    <string name="apply_signature">دستخط کریں اور محفوظ کریں</string>
+
+    <string name="export_instruction">پی ڈی ایف صفحات کو تصاویر بنائیں، پرنٹ کریں یا شیئر کریں۔</string>
+    <string name="export_images">صفحات کو تصاویر میں ایکسپورٹ کریں</string>
+    <string name="images_exported">تصاویر محفوظ ہو گئیں</string>
+    <string name="print_pdf">پرنٹ کریں</string>
+    <string name="share_pdf">شیئر کریں</string>
+
     <string name="merge_instruction">دو یا زیادہ پی ڈی ایف فائلیں چنیں، جس ترتیب میں چنیں گے اسی ترتیب سے ملیں گی۔</string>
     <string name="select_pdfs">پی ڈی ایف فائلیں چنیں</string>
     <string name="files_selected">فائلیں منتخب</string>

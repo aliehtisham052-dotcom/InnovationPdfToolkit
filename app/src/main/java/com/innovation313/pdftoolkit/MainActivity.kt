@@ -54,5 +54,8 @@ private fun AppNavHost(viewModel: PdfToolViewModel) {
         PdfTool.IMAGES_TO_PDF -> ImagesToPdfScreen(viewModel, onBack = ::goHome)
         PdfTool.COMPRESS -> CompressScreen(viewModel, onBack = ::goHome)
         PdfTool.OCR -> OcrScreen(onBack = ::goHome)
+        PdfTool.WATERMARK -> WatermarkScreen(onBack = ::goHome)
+        PdfTool.SIGNATURE -> SignatureScreen(onBack = ::goHome)
+        PdfTool.EXPORT -> ExportScreen(onBack = ::goHome)
     }
 }

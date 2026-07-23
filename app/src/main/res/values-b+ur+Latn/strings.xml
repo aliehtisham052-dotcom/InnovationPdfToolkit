@@ -39,6 +39,36 @@
     <string name="delete_page">Delete Karein</string>
     <string name="save_pdf">PDF Save Karein</string>
 
+    <string name="tool_watermark">Watermark</string>
+    <string name="tool_watermark_desc">Text stamp, page numbers</string>
+    <string name="tool_signature">E-Signature</string>
+    <string name="tool_signature_desc">Ungli se dastakhat karein</string>
+    <string name="tool_export">Export &amp; Share</string>
+    <string name="tool_export_desc">Images, print, share</string>
+
+    <string name="watermark_instruction">Har page par text watermark aur page numbers shamil karein.</string>
+    <string name="watermark_text">Watermark ka text</string>
+    <string name="opacity">Shaffafiyat</string>
+    <string name="diagonal">Tircha</string>
+    <string name="add_page_numbers">Page numbers shamil karein</string>
+    <string name="apply_now">Apply Karein aur Save Karein</string>
+
+    <string name="signature_instruction">Neeche apne dastakhat banayen, phir PDF aur jagah chunein.</string>
+    <string name="clear_signature">Dastakhat Mitayen</string>
+    <string name="signature_empty">Pehle dastakhat banayen.</string>
+    <string name="page_number">Page number</string>
+    <string name="position">Jagah</string>
+    <string name="pos_bottom_left">Neeche Bayen</string>
+    <string name="pos_bottom_right">Neeche Dayen</string>
+    <string name="pos_center">Darmiyan</string>
+    <string name="apply_signature">Dastakhat Karein aur Save Karein</string>
+
+    <string name="export_instruction">PDF pages ko images banayen, print karein ya share karein.</string>
+    <string name="export_images">Pages ko images mein export karein</string>
+    <string name="images_exported">Images save ho gayin</string>
+    <string name="print_pdf">Print Karein</string>
+    <string name="share_pdf">Share Karein</string>
+
     <string name="merge_instruction">Do ya zyada PDF files chunein — jis tarteeb mein chunenge usi tarteeb se milengi.</string>
     <string name="select_pdfs">PDF files chunein</string>
     <string name="files_selected">files select hain</string>

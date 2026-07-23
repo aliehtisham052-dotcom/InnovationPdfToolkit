@@ -11,9 +11,12 @@ import androidx.compose.material.icons.filled.CallSplit
 import androidx.compose.material.icons.filled.Compress
 import androidx.compose.material.icons.filled.DocumentScanner
 import androidx.compose.material.icons.filled.Image
+import androidx.compose.material.icons.filled.Draw
+import androidx.compose.material.icons.filled.IosShare
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Reorder
 import androidx.compose.material.icons.filled.TextFields
+import androidx.compose.material.icons.filled.WaterDrop
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -31,7 +34,10 @@ enum class PdfTool(val icon: ImageVector, val titleKey: String, val subtitleKey:
     SPLIT(Icons.Filled.CallSplit, "tool_split", "tool_split_desc"),
     IMAGES_TO_PDF(Icons.Filled.Image, "tool_images_to_pdf", "tool_images_to_pdf_desc"),
     COMPRESS(Icons.Filled.Compress, "tool_compress", "tool_compress_desc"),
-    OCR(Icons.Filled.TextFields, "tool_ocr", "tool_ocr_desc")
+    OCR(Icons.Filled.TextFields, "tool_ocr", "tool_ocr_desc"),
+    WATERMARK(Icons.Filled.WaterDrop, "tool_watermark", "tool_watermark_desc"),
+    SIGNATURE(Icons.Filled.Draw, "tool_signature", "tool_signature_desc"),
+    EXPORT(Icons.Filled.IosShare, "tool_export", "tool_export_desc")
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
