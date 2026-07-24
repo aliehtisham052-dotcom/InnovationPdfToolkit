@@ -20,7 +20,11 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            // Signed with the debug key so testers can install this build directly.
+            // Replace with a real release keystore before publishing to Play.
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
 
@@ -66,8 +70,8 @@ dependencies {
 
     // Google ML Kit — Document Scanner (camera capture, auto edge-detect/crop, filters, multi-page)
     implementation("com.google.android.gms:play-services-mlkit-document-scanner:16.0.0")
-    // Google ML Kit — on-device OCR text recognition
-    implementation("com.google.mlkit:text-recognition:16.0.1")
+    // Google ML Kit — OCR, unbundled: the model ships via Play Services instead of inside the APK
+    implementation("com.google.android.gms:play-services-mlkit-text-recognition:19.0.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")

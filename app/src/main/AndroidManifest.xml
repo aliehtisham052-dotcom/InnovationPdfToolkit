@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PdfToolkit">
 
+        <!-- Ask Play Services to download the OCR model on install rather than on first use -->
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="ocr" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
