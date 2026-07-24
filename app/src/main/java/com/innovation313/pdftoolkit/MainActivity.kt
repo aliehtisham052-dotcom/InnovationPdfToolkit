@@ -145,12 +145,16 @@ private fun AppNavHost(
         )
         PdfTool.PAGES -> PageManagerScreen(onBack = ::goHome)
         PdfTool.MERGE -> MergeScreen(viewModel, onBack = ::goHome)
-        PdfTool.SPLIT -> SplitScreen(viewModel, onBack = ::goHome)
+        PdfTool.SPLIT -> SplitScreen(onBack = ::goHome)
         PdfTool.IMAGES_TO_PDF -> ImagesToPdfScreen(viewModel, onBack = ::goHome)
-        PdfTool.COMPRESS -> CompressScreen(viewModel, onBack = ::goHome)
+        PdfTool.COMPRESS -> CompressScreen(onBack = ::goHome)
         PdfTool.OCR -> OcrScreen(onBack = ::goHome)
         PdfTool.WATERMARK -> WatermarkScreen(onBack = ::goHome)
         PdfTool.SIGNATURE -> SignatureScreen(onBack = ::goHome)
         PdfTool.EXPORT -> ExportScreen(onBack = ::goHome)
+        PdfTool.FILTER -> FilterScreen(onBack = ::goHome)
+        PdfTool.INSERT -> InsertScreen(onBack = ::goHome)
+        PdfTool.ID_CARD -> IdCardScreen(onBack = ::goHome)
+        PdfTool.BATCH -> BatchScreen(onBack = ::goHome)
     }
 }

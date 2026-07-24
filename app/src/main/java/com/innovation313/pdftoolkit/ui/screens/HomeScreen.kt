@@ -15,8 +15,12 @@ import androidx.compose.material.icons.filled.CallSplit
 import androidx.compose.material.icons.filled.Compress
 import androidx.compose.material.icons.filled.DarkMode
 import androidx.compose.material.icons.filled.DocumentScanner
+import androidx.compose.material.icons.filled.Badge
+import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Draw
+import androidx.compose.material.icons.filled.FilterBAndW
 import androidx.compose.material.icons.filled.Image
+import androidx.compose.material.icons.filled.PostAdd
 import androidx.compose.material.icons.filled.IosShare
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.LightMode
@@ -53,7 +57,11 @@ enum class PdfTool(val icon: ImageVector, val titleKey: String, val subtitleKey:
     OCR(Icons.Filled.TextFields, "tool_ocr", "tool_ocr_desc"),
     WATERMARK(Icons.Filled.WaterDrop, "tool_watermark", "tool_watermark_desc"),
     SIGNATURE(Icons.Filled.Draw, "tool_signature", "tool_signature_desc"),
-    EXPORT(Icons.Filled.IosShare, "tool_export", "tool_export_desc")
+    EXPORT(Icons.Filled.IosShare, "tool_export", "tool_export_desc"),
+    FILTER(Icons.Filled.FilterBAndW, "tool_filter", "tool_filter_desc"),
+    INSERT(Icons.Filled.PostAdd, "tool_insert", "tool_insert_desc"),
+    ID_CARD(Icons.Filled.Badge, "tool_idcard", "tool_idcard_desc"),
+    BATCH(Icons.Filled.ContentCopy, "tool_batch", "tool_batch_desc")
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

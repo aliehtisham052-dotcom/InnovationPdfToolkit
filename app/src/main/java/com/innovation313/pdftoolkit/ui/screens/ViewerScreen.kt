@@ -7,10 +7,16 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.gestures.detectTransformGestures
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.itemsIndexed as gridItemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.GridView
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Print
 import androidx.compose.material.icons.filled.UploadFile
@@ -54,6 +60,8 @@ fun ViewerScreen(
 
     // Pinch-to-zoom state, shared across the page column
     var scale by remember { mutableStateOf(1f) }
+    val listState = rememberLazyListState()
+    var showThumbnails by remember { mutableStateOf(false) }
 
     fun loadPdf(uri: Uri) {
         pageBitmaps.clear()
@@ -85,6 +93,9 @@ fun ViewerScreen(
                 navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Filled.ArrowBack, null) } },
                 actions = {
                     if (hasOpened) {
+                        IconButton(onClick = { showThumbnails = !showThumbnails }) {
+                            Icon(Icons.Filled.GridView, contentDescription = resolveLabel("thumbnails"))
+                        }
                         IconButton(onClick = { scale = 1f }) {
                             Icon(Icons.Filled.ZoomOutMap, contentDescription = resolveLabel("reset_zoom"))
                         }
@@ -125,7 +136,39 @@ fun ViewerScreen(
                 if (isLoading) {
                     LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
                 }
-                LazyColumn(
+                if (showThumbnails) {
+                    LazyVerticalGrid(
+                        columns = GridCells.Fixed(3),
+                        contentPadding = PaddingValues(12.dp),
+                        horizontalArrangement = Arrangement.spacedBy(10.dp),
+                        verticalArrangement = Arrangement.spacedBy(10.dp),
+                        modifier = Modifier.fillMaxSize()
+                    ) {
+                        gridItemsIndexed(pageBitmaps) { index, bmp ->
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                modifier = Modifier.clickable {
+                                    showThumbnails = false
+                                    scope.launch { listState.scrollToItem(index) }
+                                }
+                            ) {
+                                Image(
+                                    bitmap = bmp.asImageBitmap(),
+                                    contentDescription = null,
+                                    contentScale = ContentScale.FillWidth,
+                                    modifier = Modifier.fillMaxWidth()
+                                )
+                                Text(
+                                    text = "${index + 1}",
+                                    style = MaterialTheme.typography.labelLarge,
+                                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f)
+                                )
+                            }
+                        }
+                    }
+                } else {
+                    LazyColumn(
+                    state = listState,
                     contentPadding = PaddingValues(12.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp),
                     modifier = Modifier
@@ -154,6 +197,7 @@ fun ViewerScreen(
                             )
                         }
                     }
+                }
                 }
             }
         }
