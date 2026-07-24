@@ -98,4 +98,13 @@
     <string name="success">Mukammal</string>
     <string name="pages">Pages</string>
     <string name="failed">Nakaam</string>
+    <string name="recent_files">Recent Files</string>
+    <string name="clear">Saaf Karein</string>
+    <string name="theme_toggle">Theme Badlein</string>
+    <string name="language">Zaban</string>
+    <string name="lang_system">System ki zaban</string>
+    <string name="lang_english">English</string>
+    <string name="lang_urdu">اردو</string>
+    <string name="lang_roman_urdu">Roman Urdu</string>
+    <string name="reset_zoom">Zoom Reset Karein</string>
 </resources>

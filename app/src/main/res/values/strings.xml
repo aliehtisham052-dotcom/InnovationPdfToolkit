@@ -98,4 +98,13 @@
     <string name="success">Done</string>
     <string name="pages">Pages</string>
     <string name="failed">Failed</string>
+    <string name="recent_files">Recent files</string>
+    <string name="clear">Clear</string>
+    <string name="theme_toggle">Toggle theme</string>
+    <string name="language">Language</string>
+    <string name="lang_system">System default</string>
+    <string name="lang_english">English</string>
+    <string name="lang_urdu">اردو</string>
+    <string name="lang_roman_urdu">Roman Urdu</string>
+    <string name="reset_zoom">Reset zoom</string>
 </resources>

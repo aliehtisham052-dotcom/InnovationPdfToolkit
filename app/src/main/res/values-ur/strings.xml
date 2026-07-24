@@ -98,4 +98,13 @@
     <string name="success">مکمل ہو گیا</string>
     <string name="pages">صفحات</string>
     <string name="failed">ناکام</string>
+    <string name="recent_files">حالیہ فائلیں</string>
+    <string name="clear">صاف کریں</string>
+    <string name="theme_toggle">تھیم تبدیل کریں</string>
+    <string name="language">زبان</string>
+    <string name="lang_system">سسٹم کی زبان</string>
+    <string name="lang_english">English</string>
+    <string name="lang_urdu">اردو</string>
+    <string name="lang_roman_urdu">Roman Urdu</string>
+    <string name="reset_zoom">زوم ری سیٹ کریں</string>
 </resources>

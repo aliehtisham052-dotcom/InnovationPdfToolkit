@@ -58,6 +58,7 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.material:material-icons-extended")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4")
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
 
     // Coroutines for background PDF processing off the main thread
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")

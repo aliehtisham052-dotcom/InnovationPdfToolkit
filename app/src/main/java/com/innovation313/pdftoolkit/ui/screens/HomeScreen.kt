@@ -1,7 +1,11 @@
 package com.innovation313.pdftoolkit.ui.screens
 
+import android.net.Uri
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -9,22 +13,34 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CallMerge
 import androidx.compose.material.icons.filled.CallSplit
 import androidx.compose.material.icons.filled.Compress
+import androidx.compose.material.icons.filled.DarkMode
 import androidx.compose.material.icons.filled.DocumentScanner
-import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Draw
+import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.IosShare
+import androidx.compose.material.icons.filled.Language
+import androidx.compose.material.icons.filled.LightMode
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Reorder
+import androidx.compose.material.icons.filled.SettingsBrightness
 import androidx.compose.material.icons.filled.TextFields
 import androidx.compose.material.icons.filled.WaterDrop
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.innovation313.pdftoolkit.data.AppLanguage
+import com.innovation313.pdftoolkit.data.ThemeMode
 import com.innovation313.pdftoolkit.ui.resolveLabel
+import com.innovation313.pdftoolkit.viewmodel.AppViewModel
 
 enum class PdfTool(val icon: ImageVector, val titleKey: String, val subtitleKey: String) {
     SCAN(Icons.Filled.DocumentScanner, "tool_scan", "tool_scan_desc"),
@@ -42,10 +58,67 @@ enum class PdfTool(val icon: ImageVector, val titleKey: String, val subtitleKey:
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(onToolSelected: (PdfTool) -> Unit) {
+fun HomeScreen(
+    appViewModel: AppViewModel,
+    onToolSelected: (PdfTool) -> Unit,
+    onRecentOpened: (Uri) -> Unit
+) {
+    val recents by appViewModel.recentFiles.collectAsState()
+    val themeMode by appViewModel.themeMode.collectAsState()
+    val language by appViewModel.language.collectAsState()
+    var languageMenuOpen by remember { mutableStateOf(false) }
+
     Scaffold(
         topBar = {
-            TopAppBar(title = { Text(resolveLabel("app_name"), fontWeight = FontWeight.SemiBold) })
+            TopAppBar(
+                title = { Text(resolveLabel("app_name"), fontWeight = FontWeight.SemiBold) },
+                actions = {
+                    Box {
+                        IconButton(onClick = { languageMenuOpen = true }) {
+                            Icon(Icons.Filled.Language, contentDescription = resolveLabel("language"))
+                        }
+                        DropdownMenu(
+                            expanded = languageMenuOpen,
+                            onDismissRequest = { languageMenuOpen = false }
+                        ) {
+                            listOf(
+                                AppLanguage.SYSTEM to "lang_system",
+                                AppLanguage.ENGLISH to "lang_english",
+                                AppLanguage.URDU to "lang_urdu",
+                                AppLanguage.ROMAN_URDU to "lang_roman_urdu"
+                            ).forEach { (lang, key) ->
+                                DropdownMenuItem(
+                                    text = {
+                                        Text(
+                                            resolveLabel(key),
+                                            fontWeight = if (language == lang) FontWeight.Bold else FontWeight.Normal
+                                        )
+                                    },
+                                    onClick = {
+                                        appViewModel.setLanguage(lang)
+                                        languageMenuOpen = false
+                                    }
+                                )
+                            }
+                        }
+                    }
+                    IconButton(onClick = {
+                        val next = when (themeMode) {
+                            ThemeMode.SYSTEM -> ThemeMode.LIGHT
+                            ThemeMode.LIGHT -> ThemeMode.DARK
+                            ThemeMode.DARK -> ThemeMode.SYSTEM
+                        }
+                        appViewModel.setThemeMode(next)
+                    }) {
+                        val icon = when (themeMode) {
+                            ThemeMode.SYSTEM -> Icons.Filled.SettingsBrightness
+                            ThemeMode.LIGHT -> Icons.Filled.LightMode
+                            ThemeMode.DARK -> Icons.Filled.DarkMode
+                        }
+                        Icon(icon, contentDescription = resolveLabel("theme_toggle"))
+                    }
+                }
+            )
         }
     ) { padding ->
         LazyVerticalGrid(
@@ -55,6 +128,31 @@ fun HomeScreen(onToolSelected: (PdfTool) -> Unit) {
             verticalArrangement = Arrangement.spacedBy(12.dp),
             modifier = Modifier.padding(padding).fillMaxSize()
         ) {
+            if (recents.isNotEmpty()) {
+                item(span = { GridItemSpan(maxLineSpan) }) {
+                    Column(modifier = Modifier.fillMaxWidth()) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text(
+                                text = resolveLabel("recent_files"),
+                                style = MaterialTheme.typography.labelLarge,
+                                modifier = Modifier.weight(1f)
+                            )
+                            TextButton(onClick = { appViewModel.clearRecents() }) {
+                                Text(resolveLabel("clear"))
+                            }
+                        }
+                        LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            items(recents) { file ->
+                                AssistChip(
+                                    onClick = { onRecentOpened(Uri.parse(file.uri)) },
+                                    label = { Text(file.name.take(22)) }
+                                )
+                            }
+                        }
+                        Spacer(modifier = Modifier.height(4.dp))
+                    }
+                }
+            }
             items(PdfTool.entries) { tool ->
                 ToolCard(tool = tool, onClick = { onToolSelected(tool) })
             }
